@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="Imagenes">
+    <file>Icons/exit.png</file>
+    <file>Icons/help.jpg</file>
+    <file>Icons/logoCovidBlanco.png</file>
+    <file>Icons/logout.png</file>
+    <file>Icons/profile.png</file>
+  </qresource>
+</RCC>
