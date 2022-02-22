@@ -4,6 +4,7 @@ import sys
 from PySide6 import QtCharts
 
 import aboutApp
+import helpApp
 import login
 from interface import *
 from urlRequest import urlRequest
@@ -23,6 +24,10 @@ class MainWindow(QMainWindow):
 
         # Boton sobre la app
         self.ui.actionAbout_App_2.triggered.connect(self.aboutApp)
+
+        # Boton sobre como usar la app
+
+        self.ui.actionHelp.triggered.connect(self.helpButton)
 
         # Mostrar la lista de una provincia
         self.ui.buscadorProvincia.currentTextChanged.connect(self.cargarMunicipio)
@@ -45,6 +50,11 @@ class MainWindow(QMainWindow):
     def aboutApp(self):
         info = aboutApp.aboutApp()
         info.exec()
+
+    # Como usar la app
+    def helpButton(self):
+        help = helpApp.helpApp()
+        help.exec()
 
     def cargarMunicipio(self):
         self.ui.buscadorCiudad.clear()
