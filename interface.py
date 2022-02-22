@@ -113,6 +113,8 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.buscadorCiudad)
 
+        self.buscadorCiudad.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Elige un municipio", None))
+
         self.mostrarButton = QPushButton(self.Opciones)
         self.mostrarButton.setObjectName(u"mostrarButton")
         self.mostrarButton.setMinimumSize(QSize(70, 30))
@@ -153,7 +155,7 @@ class Ui_MainWindow(object):
         self.grafico_2 = QGridLayout(self.grafico)
         self.grafico_2.setSpacing(0)
         self.grafico_2.setObjectName(u"grafico_2")
-        self.grafico_2.setContentsMargins(1, 1, 1, 1)
+        self.grafico_2.setContentsMargins(0, 0, 0, 0)
 
         self.verticalLayout_2.addWidget(self.grafico)
 

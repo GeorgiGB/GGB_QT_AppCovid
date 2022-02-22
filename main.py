@@ -66,6 +66,8 @@ class MainWindow(QMainWindow):
         set2 = QtCharts.QBarSet("Casos PCR+ 14 dias")
         set3 = QtCharts.QBarSet("Defuncions")
 
+
+
         # Muestra casos de las ciudades dependiendo de la eleccion del municipio
 
         # 0 es Valencia
@@ -103,7 +105,7 @@ class MainWindow(QMainWindow):
 
         chart = QtCharts.QChart()
         chart.addSeries(series)
-        chart.setTitle("Contagios Covid")
+        chart.setTitle("Contagios Covid últimos 14 Dias")
         chart.setAnimationOptions(QtCharts.QChart.SeriesAnimations)
 
         axis = QtCharts.QBarCategoryAxis()
@@ -121,5 +123,5 @@ class MainWindow(QMainWindow):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.ui.chart_view.sizePolicy().hasHeightForWidth())
         self.ui.chart_view.setSizePolicy(sizePolicy)
-        self.ui.chart_view.setMinimumSize(QSize(0, 300))
-        self.ui.grafico_2.addWidget(self.ui.chart_view, 0, 0, 1, 1)
+        self.ui.chart_view.setFixedSize(QSize(400, 300))
+        self.ui.grafico_2.addWidget(self.ui.chart_view, 0, 0, 0, 0)
