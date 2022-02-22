@@ -7,6 +7,7 @@ import bd
 from qt_material import apply_stylesheet
 from PySide6.QtGui import QKeySequence
 
+
 class LoginWindow(QWidget):
     def __init__(self):
         super().__init__()
@@ -39,15 +40,14 @@ class LoginWindow(QWidget):
         # ShortCuts para pulsar enter
         self.button1.setShortcut(QKeySequence(Qt.Key_Return))
 
-
     # Con el boton confirmamos si el usuario y la contraseña son correctos para que nos permita pasar al MainWindow
+
     def button_pressed(self, user, passwd):
         if bd.readBD(user, passwd):
             if self.main1 is None:
                 self.main1 = main.MainWindow(self)
-            self.hide()
-            self.main1.show()
-
+                self.hide()
+                self.main1.show()
 
 
 if __name__ == "__main__":
