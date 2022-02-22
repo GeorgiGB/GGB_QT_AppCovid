@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setMinimumSize(700, 700)
-        #MainWindow.setMaximumSize(900, 900)
+
         self.actionExit = QAction(MainWindow)
         self.actionExit.setObjectName(u"actionExit")
         icon = QIcon()
@@ -199,7 +199,6 @@ class Ui_MainWindow(object):
 
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuInfo.menuAction())
-        #self.menuFile.addAction(self.actionGithub)
         self.menuFile.addAction(self.actionLogout)
         self.menuFile.addAction(self.actionExit)
         self.menuInfo.addAction(self.actionHelp)
@@ -229,7 +228,10 @@ class Ui_MainWindow(object):
         self.actionAuthor.setText(QCoreApplication.translate("MainWindow", u"Author: Georgi Georgiev DI 2021-2022", None))
         self.actionAbout_App_2.setText(QCoreApplication.translate("MainWindow", u"About App", None))
         self.label_2.setText("")
+
+        # Elegir provincias
         self.elegirProvincia.setText(QCoreApplication.translate("MainWindow", u"Elige una provincia", None))
+
         self.buscadorProvincia.setItemText(0, QCoreApplication.translate("MainWindow", u"Valencia", None))
         self.buscadorProvincia.setItemText(1, QCoreApplication.translate("MainWindow", u"Alicante", None))
         self.buscadorProvincia.setItemText(2, QCoreApplication.translate("MainWindow", u"Castellon", None))
@@ -240,5 +242,9 @@ class Ui_MainWindow(object):
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"Profile", None))
         self.menuInfo.setTitle(QCoreApplication.translate("MainWindow", u"Info", None))
         self.menuAbout_App.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+
+        self.buscadorProvincia.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Provincias", None))
+        self.buscadorProvincia.setCurrentIndex(-1)
+
     # retranslateUi
 
